@@ -1,0 +1,129 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.library-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.library-table th,
+.library-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.library-table thead th {
+  background-color: #4caf50;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.library-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.library-table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.library-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.library-table tfoot th {
+  background-color: #e8e8e8;
+  font-weight: bold;
+  text-align: right;
+}
+
+.library-table tfoot td {
+  text-align: center;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Button Container */
+.button-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto 0 auto; /* Space above the button */
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+}
+
+/* Button Styles */
+button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%;
+  }
+
+  .library-table th,
+  .library-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .button-container {
+    justify-content: center; /* Center button on smaller screens */
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

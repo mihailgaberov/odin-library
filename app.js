@@ -1,4 +1,4 @@
-const mainContainer = document.getElementById("main");
+
 
 const myLibrary = [
   {
