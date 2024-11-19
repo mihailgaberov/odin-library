@@ -4,47 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Library</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <h2>Odin Library</h2>
-    <div class="table-container">
-      <table class="library-table">
-        <thead>
-          <tr>
-            <th scope="col">No</th>
-            <th scope="col">Book Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Pages</th>
-            <th scope="col">Read?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>The Hobbit</td>
-            <td>J.R.R. Tolkien</td>
-            <td>310</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>1984</td>
-            <td>George Orwell</td>
-            <td>328</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th scope="row" colspan="2">Total Books</th>
-            <td colspan="3">2</td>
-          </tr>
-        </tfoot>
-      </table>
+    <table class="library-table">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Book Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Pages</th>
+          <th scope="col">Read?</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="book-list">
+        <!-- Book rows will be inserted here dynamically -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">Total Books</th>
+          <td id="total-books">0</td>
+        </tr>
+      </tfoot>
+    </table>
+    <button class="add-book-btn">+</button>
+
+    <!-- Add Book Dialog -->
+    <div id="add-book-dialog" class="dialog">
+      <div class="dialog-content">
+        <h3>Add a New Book</h3>
+        <label for="title">Title:</label>
+        <input type="text" id="title" />
+        <label for="author">Author:</label>
+        <input type="text" id="author" />
+        <label for="pages">Pages:</label>
+        <input type="number" id="pages" />
+        <label for="read">Read:</label>
+        <input type="checkbox" id="read" />
+        <div class="dialog-buttons">
+          <button id="submit-book">Add Book</button>
+          <button id="cancel-book">Cancel</button>
+        </div>
+      </div>
     </div>
-    <div class="button-container">
-      <button>+</button>
-    </div>
+
+    <script src="./app.js"></script>
   </body>
 </html>
